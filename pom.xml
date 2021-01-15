@@ -28,10 +28,6 @@
 		<java.version>1.8</java.version>
 	</properties>
 
-	<dependencies>
-
-	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -46,7 +42,19 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<configuration>
+					<goals>install</goals>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
+
+	<scm>
+		<developerConnection>scm:git:git@github.com:lucasfabril/pet-clinic.git</developerConnection>
+	</scm>
 
 </project>
